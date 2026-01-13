@@ -3903,6 +3903,14 @@ input, select, textarea {
 					color: #fff;
 				}
 
+		#footer .service-area {
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 1 em;
+			letter-spacing: 0.em;
+			margin: 1.5em 0 1em 0;
+			text-transform: uppercase;
+		}
+
 		#footer .copyright {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 0.8em;
