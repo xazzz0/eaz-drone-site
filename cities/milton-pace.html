@@ -16,12 +16,29 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "ProfessionalService",
-			"name": "EAZ Drones",
-			"description": "Professional drone services for Milton & Pace - residential inspections, construction documentation, and rural properties",
-			"serviceType": "Aerial Drone Services",
-			"areaServed": ["Milton, FL", "Pace, FL"],		"telephone": "+1-850-733-7033",			"email": "info@eazdrones.com",
-			"geo": {"@type": "GeoCoordinates", "latitude": 30.6433, "longitude": -87.0179},
+			"name": "EAZ Drones — Milton & Pace Service Area",
 			"url": "https://www.eazdrones.com/cities/milton-pace.html",
+			"telephone": "+1-850-733-7033",
+			"email": "info@eazdrones.com",
+			"address": {"@type":"PostalAddress","addressLocality":"Milton","addressRegion":"FL","addressCountry":"US"},
+			"areaServed": [
+			  {"@type":"City","name":"Milton, FL"},
+			  {"@type":"City","name":"Pace, FL"}
+			],
+			"serviceType": ["Aerial Photography","Inspections","Thermal Imaging","Construction Progress Documentation"],
+			"description": "Professional drone services for Milton & Pace - residential inspections, construction documentation, and rural properties",
+			"geo": {"@type": "GeoCoordinates", "latitude": 30.6433, "longitude": -87.0179},
+			"hasOfferCatalog": {
+			  "@type": "OfferCatalog",
+			  "name": "Services",
+			  "itemListElement": [
+			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aerial Cinematography"}},
+			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Inspections & Reporting"}},
+			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Construction Documentation"}}
+			  ]
+			},
+			"priceRange": "$$",
+			"additionalType": "Drone Service Provider"
 			"hasOfferCatalog": {
 				"@type": "OfferCatalog",
 				"name": "Services",
