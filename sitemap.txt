@@ -1,7 +1,9 @@
 https://www.eazdrones.com/
+https://www.eazdrones.com/pages/services.html
 https://www.eazdrones.com/pages/about.html
 https://www.eazdrones.com/pages/contact.html
 https://www.eazdrones.com/pages/service-areas.html
+https://www.eazdrones.com/pages/booking.html
 https://www.eazdrones.com/cities/navarre.html
 https://www.eazdrones.com/cities/gulf-breeze.html
 https://www.eazdrones.com/cities/pensacola.html
