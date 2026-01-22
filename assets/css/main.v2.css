@@ -3473,12 +3473,25 @@ input, select, textarea {
 				display: block;
 				height: inherit;
 				line-height: inherit;
+				align-items: center;
+				display: flex;
+				gap: 0.5em;
 			}
+
+				#header h1 a .header-logo {
+					height: 2.5em;
+					width: auto;
+					max-height: 100%;
+				}
 
 				@media screen and (max-width: 736px) {
 
 					#header h1 a {
 						font-size: 0.8em;
+					}
+
+					#header h1 a .header-logo {
+						height: 1.8em;
 					}
 
 				}
