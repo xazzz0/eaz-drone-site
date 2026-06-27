@@ -4,9 +4,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>EAZ Drones | Drone Services in Navarre, FL & Emerald Coast</title>
+		<title>Drone Services Near Me — EAZ Drones</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,7 +14,7 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="canonical" href="https://www.eazdrones.com/" />
-				<meta name="description" content="Drone services in Navarre, FL and across Florida's Emerald Coast. FAA Part 107 certified aerial photography, videography, and inspections for real estate, construction, and commercial projects." />
+				<meta name="description" content="FAA Part‑107 drone services near you — aerial photos, video, and inspections across the Emerald Coast. Fast booking & on‑site in Navarre, Pensacola, Destin. Call (850) 733‑7033." />
 
 				<!-- Open Graph / Facebook -->
 				<meta property="og:type" content="website" />
@@ -30,7 +30,22 @@
 				<meta name="twitter:description" content="Expert drone videography, photography, and inspections across Florida's Emerald Coast." />
 				<meta name="twitter:image" content="https://www.eazdrones.com/images/banner.jpg" />
 				<link rel="preload" as="image" href="/images/smboro--jQc9HXteh4-unsplash.jpg" />
-		<link rel="stylesheet" href="assets/css/main.v2.css" />
+
+			<!-- Critical CSS (inline small subset used for above-the-fold hero + buttons) -->
+			<style>
+			/* Critical: hero and CTAs */
+			html,body{height:100%;}
+			#page-wrapper{min-height:100vh;}
+			#banner{display:flex;align-items:center;justify-content:center;padding:2rem 1rem;background:#0b1220;color:#fff;background-size:cover;background-position:center}
+			#banner .inner{max-width:820px;text-align:center}
+			#banner h1,#banner h2{font-size:1.6rem;margin:.2rem 0}
+			#banner .lead{font-size:1rem;margin:.4rem 0 1rem}
+			.button.primary{background:#ff6e3a;border-color:#ff6e3a;color:#fff}
+			.button{display:inline-block;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+			@media(min-width:720px){#banner h1{font-size:2.4rem}#banner .lead{font-size:1.125rem}}
+			</style>
+
+			<link rel="stylesheet" href="assets/css/main.v2.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.v2.css" /></noscript>
 			<script type="application/ld+json">
 			{
@@ -101,16 +116,19 @@
 </header>
 
 
-				<!-- Banner -->
-					<section id="banner">
+				<!-- Banner / Hero (concise, optimized for LCP) -->
+					<section id="banner" aria-label="Hero" style="background-image:url('/images/smboro--jQc9HXteh4-unsplash.jpg')">
 						<div class="inner">
-							<h2>EAZ Drones </h2>
-							<p>Expert Videography, Photography, and Technical Inspection services across the Florida Panhandle and Emerald Coast. Serving Navarre, Gulf Breeze, Pensacola, and Destin.</p>
-								<ul class="actions special">
-									<li><a href="pages/contact.html" class="button primary">Contact Us</a></li>
-								</ul>
+							<h1>Drone Services Near You</h1>
+							<p class="lead">FAA Part‑107 certified • Photo • Video • Inspections — Fast local service across the Emerald Coast.</p>
+							<div class="banner-ctas">
+								<a href="tel:+18507337033" class="button primary">Call Now — (850) 733‑7033</a>
+								<a href="/pages/booking.html" class="button">Book Online</a>
+							</div>
+							<p class="micro" style="margin-top:.6rem;font-size:.85rem;opacity:.95">Serving Navarre • Pensacola • Gulf Breeze • Destin — on‑site same‑day availability for many requests.</p>
 						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+						<!-- Provide an explicit, preloaded image element to stabilize LCP -->
+						<img src="/images/smboro--jQc9HXteh4-unsplash.jpg" alt="Aerial coastline shot" width="1200" height="675" style="display:none" fetchpriority="high" />
 					</section>
 
 				<!-- One -->
@@ -205,14 +223,14 @@
 
 
 			</div>
-<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- Scripts (deferred to eliminate render-blocking) -->
+			<script src="assets/js/jquery.min.js" defer></script>
+			<script src="assets/js/jquery.scrollex.min.js" defer></script>
+			<script src="assets/js/jquery.scrolly.min.js" defer></script>
+			<script src="assets/js/browser.min.js" defer></script>
+			<script src="assets/js/breakpoints.min.js" defer></script>
+			<script src="assets/js/util.js" defer></script>
+			<script src="assets/js/main.js" defer></script>
 			<script src="assets/js/track.js" defer></script>
 
 	</body>
