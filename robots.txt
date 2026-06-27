@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.eazdrones.com/sitemap.xml
 Sitemap: https://www.eazdrones.com/sitemap.txt
