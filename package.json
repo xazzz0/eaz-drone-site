@@ -1,0 +1,25 @@
+{
+  "name": "eaz-drone-site",
+  "version": "1.0.0",
+  "description": "website for drone business",
+  "main": "index.js",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xazzz0/eaz-drone-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xazzz0/eaz-drone-site/issues"
+  },
+  "homepage": "https://github.com/xazzz0/eaz-drone-site#readme",
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}
