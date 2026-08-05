@@ -1,4 +1,13 @@
 (function () {
+	function getAssetPrefix() {
+		var pathname = window.location.pathname || '';
+		if (pathname.indexOf('/pages/') !== -1 || pathname.indexOf('/cities/') !== -1 || pathname.indexOf('/templates/') !== -1) {
+			return '../';
+		}
+
+		return '';
+	}
+
 	function swapFragment(selector, url) {
 		var target = document.querySelector(selector);
 		if (!target) return Promise.resolve();
@@ -24,15 +33,16 @@
 		var header = document.querySelector('[data-site-header]');
 		var footer = document.querySelector('[data-site-footer]');
 		var tasks = [];
+		var assetPrefix = getAssetPrefix();
 
 		if (header) {
 			var variant = header.getAttribute('data-variant') === 'alt' ? 'alt' : 'default';
-			var headerUrl = variant === 'alt' ? '/assets/fragments/header-alt.html' : '/assets/fragments/header.html';
+			var headerUrl = variant === 'alt' ? assetPrefix + 'assets/fragments/header-alt.html' : assetPrefix + 'assets/fragments/header.html';
 			tasks.push(swapFragment('[data-site-header]', headerUrl));
 		}
 
 		if (footer) {
-			tasks.push(swapFragment('[data-site-footer]', '/assets/fragments/footer.html'));
+			tasks.push(swapFragment('[data-site-footer]', assetPrefix + 'assets/fragments/footer.html'));
 		}
 
 		Promise.all(tasks).then(emitReady);
