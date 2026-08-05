@@ -18,9 +18,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
         <link rel="manifest" href="../site.webmanifest">
-        <link rel="stylesheet" href="../assets/css/main.v2.css" />
-        <noscript><link rel="stylesheet" href="../assets/css/noscript.v2.css" /></noscript>
-        <link rel="stylesheet" href="../assets/css/services.css" />
+        <link rel="stylesheet" href="../assets/css/frame-field.css" />
     </head>
     <body class="landing is-preload">
 
@@ -29,11 +27,17 @@
 
 
             <section id="banner" aria-label="Services hero">
+                <div class="banner-frame" aria-hidden="true">
+                    <picture>
+                        <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w, ../images/optimized/hero-1600.avif 1600w" sizes="100vw" />
+                        <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w, ../images/optimized/hero-1600.webp 1600w" sizes="100vw" />
+                        <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w, ../images/optimized/hero-1600.jpg 1600w" sizes="100vw" alt="Services hero image" width="1600" height="900" class="banner-media" loading="eager" fetchpriority="high" decoding="async" />
+                    </picture>
+                </div>
                 <div class="inner">
                     <h2>Services & Pricing</h2>
                     <p>Clear package pricing for inspections, real estate, events, mapping, construction tracking, and commercial media.</p>
                 </div>
-                <a href="#main" class="more scrolly">See Pricing</a>
             </section>
 
             <main id="main-content">
@@ -60,6 +64,13 @@
                                 </div>
                                 <div class="pricing-stack">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-colin-640.avif 640w, ../images/optimized/spotlight-colin-960.avif 960w, ../images/optimized/spotlight-colin-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-colin-640.webp 640w, ../images/optimized/spotlight-colin-960.webp 960w, ../images/optimized/spotlight-colin-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-colin-960.jpg" srcset="../images/optimized/spotlight-colin-640.jpg 640w, ../images/optimized/spotlight-colin-960.jpg 960w, ../images/optimized/spotlight-colin-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Residential roof and infrastructure inspection" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Residential Roof Inspection</h4>
@@ -76,6 +87,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-anthony-640.avif 640w, ../images/optimized/spotlight-anthony-960.avif 960w, ../images/optimized/spotlight-anthony-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-anthony-640.webp 640w, ../images/optimized/spotlight-anthony-960.webp 960w, ../images/optimized/spotlight-anthony-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-anthony-960.jpg" srcset="../images/optimized/spotlight-anthony-640.jpg 640w, ../images/optimized/spotlight-anthony-960.jpg 960w, ../images/optimized/spotlight-anthony-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Commercial waterfront and utility inspection" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Commercial & Waterfront Utility</h4>
@@ -93,6 +111,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Aerial mapping and GIS deliverables" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Add-ons</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Aerial Mapping & GIS</strong><span>0–25 acres: $450–$600 base</span></li>
@@ -113,6 +138,13 @@
                                 </div>
                                 <div class="pricing-stack pricing-stack--two-up">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 50vw" alt="Half-day event coverage" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Half-Day Coverage</h4>
@@ -130,6 +162,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-anthony-640.avif 640w, ../images/optimized/spotlight-anthony-960.avif 960w, ../images/optimized/spotlight-anthony-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-anthony-640.webp 640w, ../images/optimized/spotlight-anthony-960.webp 960w, ../images/optimized/spotlight-anthony-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <img src="../images/optimized/spotlight-anthony-960.jpg" srcset="../images/optimized/spotlight-anthony-640.jpg 640w, ../images/optimized/spotlight-anthony-960.jpg 960w, ../images/optimized/spotlight-anthony-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 50vw" alt="Full-day event coverage" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Full-Day Coverage</h4>
@@ -149,6 +188,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 50vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 50vw" alt="Event package add-ons" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Add-ons</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Hourly overtime</strong><span>$150 per hour</span></li>
@@ -167,6 +213,13 @@
                                 </div>
                                 <div class="pricing-stack">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Real estate listing media" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Starter</h4>
@@ -183,6 +236,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--featured">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-colin-640.avif 640w, ../images/optimized/spotlight-colin-960.avif 960w, ../images/optimized/spotlight-colin-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-colin-640.webp 640w, ../images/optimized/spotlight-colin-960.webp 960w, ../images/optimized/spotlight-colin-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-colin-960.jpg" srcset="../images/optimized/spotlight-colin-640.jpg 640w, ../images/optimized/spotlight-colin-960.jpg 960w, ../images/optimized/spotlight-colin-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Pro real estate media" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Pro</h4>
@@ -201,6 +261,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-anthony-640.avif 640w, ../images/optimized/spotlight-anthony-960.avif 960w, ../images/optimized/spotlight-anthony-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-anthony-640.webp 640w, ../images/optimized/spotlight-anthony-960.webp 960w, ../images/optimized/spotlight-anthony-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-anthony-960.jpg" srcset="../images/optimized/spotlight-anthony-640.jpg 640w, ../images/optimized/spotlight-anthony-960.jpg 960w, ../images/optimized/spotlight-anthony-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Luxury estate media" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Estate</h4>
@@ -218,6 +285,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Real estate add-ons" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Add-ons</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Aerial only</strong><span>7–10 stills, no ground: $199</span></li>
@@ -238,6 +312,13 @@
                                 </div>
                                 <div class="pricing-stack pricing-stack--three-up">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Content dump capture" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Content Dump</h4>
@@ -254,6 +335,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--featured">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-colin-640.avif 640w, ../images/optimized/spotlight-colin-960.avif 960w, ../images/optimized/spotlight-colin-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-colin-640.webp 640w, ../images/optimized/spotlight-colin-960.webp 960w, ../images/optimized/spotlight-colin-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-colin-960.jpg" srcset="../images/optimized/spotlight-colin-640.jpg 640w, ../images/optimized/spotlight-colin-960.jpg 960w, ../images/optimized/spotlight-colin-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Social builder capture" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Social Builder</h4>
@@ -271,6 +359,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-anthony-640.avif 640w, ../images/optimized/spotlight-anthony-960.avif 960w, ../images/optimized/spotlight-anthony-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-anthony-640.webp 640w, ../images/optimized/spotlight-anthony-960.webp 960w, ../images/optimized/spotlight-anthony-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-anthony-960.jpg" srcset="../images/optimized/spotlight-anthony-640.jpg 640w, ../images/optimized/spotlight-anthony-960.jpg 960w, ../images/optimized/spotlight-anthony-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Commercial showcase capture" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Commercial Showcase</h4>
@@ -289,6 +384,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Creative add-ons" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Add-ons</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Additional edited stills</strong><span>$25 per image</span></li>
@@ -307,6 +409,13 @@
                                 </div>
                                 <div class="pricing-stack">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-colin-640.avif 640w, ../images/optimized/spotlight-colin-960.avif 960w, ../images/optimized/spotlight-colin-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-colin-640.webp 640w, ../images/optimized/spotlight-colin-960.webp 960w, ../images/optimized/spotlight-colin-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-colin-960.jpg" srcset="../images/optimized/spotlight-colin-640.jpg 640w, ../images/optimized/spotlight-colin-960.jpg 960w, ../images/optimized/spotlight-colin-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Small site mapping" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Small Site Spatial Mapping</h4>
@@ -326,6 +435,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Medium development site mapping" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Medium Development Site</h4>
@@ -344,6 +460,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Large acreage survey support" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Large Acreage Survey Support</h4>
@@ -360,6 +483,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-anthony-640.avif 640w, ../images/optimized/spotlight-anthony-960.avif 960w, ../images/optimized/spotlight-anthony-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-anthony-640.webp 640w, ../images/optimized/spotlight-anthony-960.webp 960w, ../images/optimized/spotlight-anthony-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-anthony-960.jpg" srcset="../images/optimized/spotlight-anthony-640.jpg 640w, ../images/optimized/spotlight-anthony-960.jpg 960w, ../images/optimized/spotlight-anthony-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Parcel overlay and express delivery" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Visual parcel map option</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Basic Parcel Visual Overlay</strong><span>$450 per site</span></li>
@@ -379,6 +509,13 @@
                                 </div>
                                 <div class="pricing-stack">
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/hero-640.avif 640w, ../images/optimized/hero-960.avif 960w, ../images/optimized/hero-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/hero-640.webp 640w, ../images/optimized/hero-960.webp 960w, ../images/optimized/hero-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/hero-1280.jpg" srcset="../images/optimized/hero-640.jpg 640w, ../images/optimized/hero-960.jpg 960w, ../images/optimized/hero-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Single progress visit" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Single Progress Visit</h4>
@@ -395,6 +532,13 @@
                                     </article>
 
                                     <article class="pricing-panel">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-colin-640.avif 640w, ../images/optimized/spotlight-colin-960.avif 960w, ../images/optimized/spotlight-colin-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-colin-640.webp 640w, ../images/optimized/spotlight-colin-960.webp 960w, ../images/optimized/spotlight-colin-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-colin-960.jpg" srcset="../images/optimized/spotlight-colin-640.jpg 640w, ../images/optimized/spotlight-colin-960.jpg 960w, ../images/optimized/spotlight-colin-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Monthly progress tracking" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <div class="pricing-panel__top">
                                             <div>
                                                 <h4>Monthly Subscription Model</h4>
@@ -410,6 +554,13 @@
                                     </article>
 
                                     <article class="pricing-panel pricing-panel--compact">
+                                            <div class="card-media card-image--wide">
+                                                <picture>
+                                                    <source type="image/avif" srcset="../images/optimized/spotlight-smboro-640.avif 640w, ../images/optimized/spotlight-smboro-960.avif 960w, ../images/optimized/spotlight-smboro-1280.avif 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <source type="image/webp" srcset="../images/optimized/spotlight-smboro-640.webp 640w, ../images/optimized/spotlight-smboro-960.webp 960w, ../images/optimized/spotlight-smboro-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 33vw" />
+                                                    <img src="../images/optimized/spotlight-smboro-960.jpg" srcset="../images/optimized/spotlight-smboro-640.jpg 640w, ../images/optimized/spotlight-smboro-960.jpg 960w, ../images/optimized/spotlight-smboro-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 33vw" alt="Supporting service packages" loading="lazy" width="1280" height="960" decoding="async" />
+                                                </picture>
+                                            </div>
                                         <h4>Supporting packages</h4>
                                         <ul class="mini-grid">
                                             <li><strong>Aerial mapping & GIS</strong><span>0–25 acres: $450–$600 base</span></li>
@@ -441,7 +592,7 @@
                                     <h3>Need help choosing a package?</h3>
                                     <p>Send the site size, address, and what you need delivered. I’ll point you to the right tier instead of making you guess.</p>
                                 </div>
-                                <a class="button primary" href="booking.html">Book Now</a>
+                                    <a class="button primary fit" href="booking.html">Book Now</a>
                             </section>
                         </div>
                     </section>
@@ -463,4 +614,4 @@
         <script src="../assets/js/track.js" defer></script>
 
     </body>
-</html>
+</html>2
