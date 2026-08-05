@@ -4,13 +4,61 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+	(function($) {
 
 	var	$window = $(window),
 		$body = $('body'),
-		$wrapper = $('#page-wrapper'),
-		$banner = $('#banner'),
-		$header = $('#header');
+		$wrapper = $('#page-wrapper');
+
+	function initializeSiteChrome() {
+		var $banner = $('#banner');
+		var $header = $('#header');
+
+		if (!$header.length) {
+			return false;
+		}
+
+		// Scrolly.
+		$('.scrolly')
+			.scrolly({
+				speed: 600,
+				offset: $header.outerHeight()
+			});
+
+		// Menu.
+		if (!$('#menu').hasClass('panel')) {
+			$('#menu')
+				.append('<a href="#menu" class="close"></a>')
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right',
+					target: $body,
+					visibleClass: 'is-menu-visible'
+				});
+		}
+
+		// Header.
+		if ($banner.length > 0
+		&&	$header.hasClass('alt')) {
+
+			$window.on('resize', function() { $window.trigger('scroll'); });
+
+			$banner.scrollex({
+				bottom:		$header.outerHeight() + 1,
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt'); },
+				leave:		function() { $header.removeClass('alt'); }
+			});
+
+		}
+
+		return true;
+	}
 
 	// Breakpoints.
 		breakpoints({
@@ -43,41 +91,8 @@
 
 		}
 
-	// Scrolly.
-		$('.scrolly')
-			.scrolly({
-				speed: 600,
-				offset: $header.outerHeight()
-			});
-
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
-			});
-
-	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
-
-			$window.on('resize', function() { $window.trigger('scroll'); });
-
-			$banner.scrollex({
-				bottom:		$header.outerHeight() + 1,
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); }
-			});
-
+		if (!initializeSiteChrome()) {
+			document.addEventListener('site-fragments:ready', initializeSiteChrome, { once: true });
 		}
 
 })(jQuery);
