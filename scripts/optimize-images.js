@@ -124,6 +124,14 @@ async function main() {
   });
 
   await writeVariantSet({
+    inputFile: "drone liftoff.jpg",
+    outputBaseName: "hero-flight",
+    widths: HERO_WIDTHS,
+    aspectRatio: 16 / 9,
+    position: "centre"
+  });
+
+  await writeVariantSet({
     inputFile: "smboro--jQc9HXteh4-unsplash.jpg",
     outputBaseName: "spotlight-smboro",
     widths: SPOTLIGHT_WIDTHS,

@@ -203,7 +203,7 @@ textarea {
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
   color: var(--color-ink);
 }
@@ -212,14 +212,21 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--color-ink);
   color: var(--color-paper);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
+  overflow: hidden;
+}
+
+.site-brand__mark img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  transform: scale(1.12);
+  transform-origin: center;
 }
 
 .site-brand__text {
@@ -511,6 +518,14 @@ article#main p,
   gap: 18px;
 }
 
+.home-services .features {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-services .features h3 {
+  font-size: 24px;
+}
+
 .features li {
   position: relative;
   padding: 26px;
@@ -615,6 +630,92 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
 .services-section-block {
   display: grid;
   gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)) center / cover no-repeat;
+  position: relative;
+}
+
+#inspection {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/roof-inspection.jpg');
+  background-size: cover;
+}
+
+#events {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/wedding-chairs.jpg');
+  background-size: cover;
+}
+
+#real-estate {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/modern-real-estate.jpg');
+  background-size: cover;
+}
+
+#creative {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/event-city-florian-delee-8t1ypwGNGoY-unsplash.jpg');
+  background-size: cover;
+}
+
+#mapping {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/land-development.jpg');
+  background-size: cover;
+}
+
+#progress {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/massive-construction-site.jpg');
+  background-size: cover;
+}
+
+.services-section-block summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.services-section-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.services-section-block .section-summary {
+  display: block;
+}
+
+.services-section-block .details-content {
+  display: grid;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.services-section-block .section-heading {
+  display: block;
+}
+
+.services-section-block .section-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-full);
+  background: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.services-section-block .section-badge::after {
+  content: "+";
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.services-section-block[open] .section-badge::after {
+  content: "−";
 }
 
 .services-trust {
@@ -639,6 +740,17 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
 .services-trust p,
 .services-closeout p {
   margin-top: 0;
+}
+
+.booking-form-shell {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.booking-form-shell iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .services-closeout {
@@ -672,7 +784,31 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
   padding: 26px;
   border: 1px solid var(--color-hairline);
   border-radius: var(--radius-lg);
-  background: var(--color-surface);
+  background: var(--color-paper);
+}
+
+.pricing-panel--addons {
+  width: 100%;
+  gap: 24px;
+  padding: 26px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-lg);
+  background: var(--color-paper);
+  grid-column: 1 / -1;
+}
+
+.pricing-panel--addons h4 {
+  font-size: 20px;
+  margin: 0 0 16px 0;
+}
+
+.pricing-panel--addons .mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pricing-panel--featured {
@@ -898,6 +1034,10 @@ iframe {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-services .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   #banner .inner,
   #banner .banner-inner,
   #banner > .inner {
@@ -951,6 +1091,10 @@ iframe {
   article#main h2,
   article#main h3 {
     font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .home-services .features {
+    grid-template-columns: 1fr;
   }
 
   article#main h3,
