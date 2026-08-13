@@ -1038,14 +1038,31 @@ iframe {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  #banner {
+    min-height: clamp(200px, 34vh, 420px);
+  }
+
   #banner .inner,
   #banner .banner-inner,
   #banner > .inner {
-    padding: 48px 32px 88px;
+    padding: 28px 22px 56px;
+    max-width: 620px;
+  }
+
+  #banner h1,
+  #banner h2 {
+    font-size: clamp(32px, 6vw, 60px);
+  }
+
+  #banner p,
+  #banner .lead,
+  #banner .micro {
+    font-size: 15px;
   }
 
   #banner .more.scrolly {
-    left: 24px;
+    left: 18px;
+    bottom: 18px;
   }
 }
 
@@ -1065,25 +1082,54 @@ iframe {
   }
 
   #banner {
-    min-height: clamp(280px, 45vh, 520px);
+    min-height: clamp(180px, 30vh, 320px);
     border-radius: 18px;
   }
 
   #banner .inner,
   #banner .banner-inner,
   #banner > .inner {
-    padding: 20px 16px 48px;
+    padding: 12px 12px 28px;
+    max-width: 520px;
   }
 
   #banner h1,
   #banner h2 {
-    font-size: clamp(32px, 9vw, 56px);
+    font-size: clamp(24px, 7vw, 40px);
   }
 
   #banner p,
   #banner .lead,
   #banner .micro {
-    font-size: 15px;
+    max-width: 28ch;
+    font-size: 13px;
+  }
+
+  #banner .banner-ctas,
+  #banner .actions,
+  .actions {
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  #banner .banner-ctas > li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  #banner .banner-ctas .button {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  #banner .more.scrolly {
+    left: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
   }
 
   .major h2,
