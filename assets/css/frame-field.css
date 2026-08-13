@@ -187,23 +187,25 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 30;
+  --header-scale: 1;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
+  gap: calc(24px * var(--header-scale));
   width: min(var(--container-max), calc(100vw - (var(--space-gutter) * 2)));
   margin: 16px auto 0;
-  padding: 16px 18px;
+  padding: calc(16px * var(--header-scale)) calc(18px * var(--header-scale));
   border: 1px solid var(--color-hairline);
   border-radius: var(--radius-full);
   background: rgba(243, 241, 236, 0.84);
   backdrop-filter: blur(10px);
+  transition: padding var(--motion-base), gap var(--motion-base), background-color var(--motion-base), border-color var(--motion-base), box-shadow var(--motion-base);
 }
 
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: calc(10px * var(--header-scale));
   min-width: 0;
   color: var(--color-ink);
 }
@@ -212,8 +214,8 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: calc(44px * var(--header-scale));
+  height: calc(44px * var(--header-scale));
   border-radius: 50%;
   background: var(--color-ink);
   color: var(--color-paper);
@@ -222,8 +224,8 @@ textarea {
 
 .site-brand__mark img {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: calc(44px * var(--header-scale));
+  height: calc(44px * var(--header-scale));
   object-fit: contain;
   transform: scale(1.12);
   transform-origin: center;
@@ -231,7 +233,7 @@ textarea {
 
 .site-brand__text {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: calc(22px * var(--header-scale));
   line-height: 1;
   text-transform: uppercase;
 }
@@ -240,14 +242,14 @@ textarea {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: calc(14px * var(--header-scale));
 }
 
 .site-nav a {
-  padding: 8px 12px;
+  padding: calc(8px * var(--header-scale)) calc(12px * var(--header-scale));
   border-radius: var(--radius-full);
   color: var(--color-muted);
-  font-size: 12px;
+  font-size: calc(12px * var(--header-scale));
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -263,7 +265,13 @@ textarea {
 .site-header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: calc(10px * var(--header-scale));
+}
+
+.site-header .button {
+  min-height: calc(44px * var(--header-scale));
+  padding: calc(11px * var(--header-scale)) calc(18px * var(--header-scale));
+  font-size: calc(12px * var(--header-scale));
 }
 
 .site-shell,
@@ -1006,6 +1014,7 @@ iframe {
 @media (max-width: 1080px) {
   #header,
   .site-header {
+    --header-scale: 0.9;
     grid-template-columns: 1fr;
     justify-items: start;
     border-radius: var(--radius-xl);
@@ -1017,6 +1026,10 @@ iframe {
 
   .site-header__actions {
     flex-wrap: wrap;
+  }
+
+  .site-header--compact {
+    --header-scale: 0.82;
   }
 
   .spotlight,
@@ -1038,31 +1051,14 @@ iframe {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  #banner {
-    min-height: clamp(200px, 34vh, 420px);
-  }
-
   #banner .inner,
   #banner .banner-inner,
   #banner > .inner {
-    padding: 28px 22px 56px;
-    max-width: 620px;
-  }
-
-  #banner h1,
-  #banner h2 {
-    font-size: clamp(32px, 6vw, 60px);
-  }
-
-  #banner p,
-  #banner .lead,
-  #banner .micro {
-    font-size: 15px;
+    padding: 48px 32px 88px;
   }
 
   #banner .more.scrolly {
-    left: 18px;
-    bottom: 18px;
+    left: 24px;
   }
 }
 
@@ -1082,54 +1078,25 @@ iframe {
   }
 
   #banner {
-    min-height: clamp(180px, 30vh, 320px);
+    min-height: 640px;
     border-radius: 18px;
   }
 
   #banner .inner,
   #banner .banner-inner,
   #banner > .inner {
-    padding: 12px 12px 28px;
-    max-width: 520px;
+    padding: 32px 22px 80px;
   }
 
   #banner h1,
   #banner h2 {
-    font-size: clamp(24px, 7vw, 40px);
+    font-size: clamp(44px, 14vw, 72px);
   }
 
   #banner p,
   #banner .lead,
   #banner .micro {
-    max-width: 28ch;
-    font-size: 13px;
-  }
-
-  #banner .banner-ctas,
-  #banner .actions,
-  .actions {
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
-  #banner .banner-ctas > li {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  #banner .banner-ctas .button {
-    width: 100%;
-    min-width: 0;
-    padding: 9px 10px;
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  #banner .more.scrolly {
-    left: 16px;
-    bottom: 16px;
-    padding: 8px 12px;
+    font-size: 15px;
   }
 
   .major h2,
@@ -1141,10 +1108,6 @@ iframe {
 
   .home-services .features {
     grid-template-columns: 1fr;
-  }
-  /* Reduce spotlight image height on small screens so cards don't become overly tall */
-  .spotlight .image {
-    min-height: 180px;
   }
 
   article#main h3,
