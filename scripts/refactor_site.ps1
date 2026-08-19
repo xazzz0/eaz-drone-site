@@ -1,4 +1,4 @@
-$root = 'C:\Users\Zoulo\OneDrive\Documents\GitHub\COP3530\eaz-drone-site'
+$root = Split-Path -Parent $PSScriptRoot
 $siteUrl = 'https://www.eazdrones.com'
 
 function Get-CanonicalUrl {
