@@ -63,6 +63,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #111;
+}
+
+.skip-link:focus-visible {
+  left: 1rem;
+}
+
 img,
 svg,
 video,
@@ -121,7 +135,8 @@ textarea {
 }
 
 :focus-visible {
-  outline: none;
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
   box-shadow: var(--focus-ring);
   border-radius: var(--radius-sm);
 }
@@ -420,6 +435,7 @@ hr {
 #main-content,
 article#main {
   display: block;
+  scroll-margin-top: 24px;
 }
 
 .major,
@@ -441,6 +457,11 @@ article#main h3 {
 article#main h3,
 .section-heading h3 {
   font-size: clamp(34px, 4.4vw, 56px);
+}
+
+article#main:not(.services-page) h4 {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1;
 }
 
 .major p,
@@ -681,6 +702,7 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
   display: block;
   cursor: pointer;
   list-style: none;
+  min-height: 44px;
 }
 
 .services-section-block summary::-webkit-details-marker {
@@ -753,8 +775,28 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
 }
 
 .booking-form-shell {
-  width: min(1240px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
+}
+
+.booking-form-intro {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.booking-form-intro h3 {
+  font-size: clamp(28px, 3vw, 44px);
+}
+
+.booking-form-fallback {
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 14px;
 }
 
 .booking-form-shell iframe {
@@ -1194,5 +1236,29 @@ iframe {
   .col-6 {
     grid-template-columns: 1fr;
     grid-column: span 12;
+  }
+
+  .booking-form-intro {
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+
+  .booking-form-shell iframe {
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
