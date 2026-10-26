@@ -1,5 +1,7 @@
 # SEO and local visibility operations
 
+The [October 26 organic search review](SEO_REVIEW_2026-10-26.md) records the current search baseline, search-to-page priorities, follow-up changes, measurement dependency, and owner actions. Use the [project write-up workflow](PROJECT_WRITEUP_TEMPLATE.md) for future original work; local link research and unsent drafts are kept in the separate owner report.
+
 ## Source and deployment
 
 The live site uses `xazzz0/eaz-drone-site`, branch `test`. The most recent successful GitHub Pages run inspected on October 26, 2026 was [32222436600](https://github.com/xazzz0/eaz-drone-site/actions/runs/32222436600), deploying commit `fa8c20ed06ea167faac74a018832ea4e99c2050e`. Its domain file points to `www.eazdrones.com`, and its page content matches the live website. The similarly named `eaz-drone-site-test` repository has older deployments and is not the source used for this work.
