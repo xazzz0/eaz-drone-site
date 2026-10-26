@@ -17,11 +17,14 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 		<link rel="manifest" href="../site.webmanifest">
 		<link rel="stylesheet" href="../assets/css/frame-field.css" />
-	</head>
+<link rel="stylesheet" href="../assets/css/service-pages.css" />
+	<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/anton-latin-400-normal.woff2" crossorigin />
+</head>
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
+<a class="skip-link" href="#main">Skip to main content</a>
 				<header id="header" class="site-header"><a class="site-brand" href="/index.html" aria-label="EAZ Drones home"><span class="site-brand__mark" aria-hidden="true"><img src="/apple-touch-icon.png" alt="" width="180" height="180" /></span><span class="site-brand__text">EAZ Drones.</span></a><nav class="site-nav" aria-label="Primary"><a href="/pages/services.html">Services</a><a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a><a href="/pages/booking.html">Book</a></nav><div class="site-header__actions"><a class="button button--ghost" href="tel:+18507337033">Call</a><a class="button button--primary" href="/pages/booking.html">Book Now</a></div></header>
 
 					<section id="banner" aria-label="Booking hero">
@@ -38,27 +41,39 @@
 
 
 				<!-- Main -->
-					<article id="main">
+					<article id="main" tabindex="-1">
 						<section class="wrapper style5">
 							<div class="inner">
 
 								<hr />
 
 								<div class="booking-form-shell">
+<section class="quote-context" aria-labelledby="quote-details">
+<h2 id="quote-details">What to include.</h2>
+<div data-quote-context="general"><p>Send the property or site address, requested service, access arrangements, and target timing. Include any photo, video, or delivery requirements.</p></div>
+<div data-quote-context="construction-progress" hidden><p>For construction-progress coverage, include:</p><ul><li>Site address or pin, approximate size, and current project stage.</li><li>Requested aerial photos or video, and any views you want covered.</li><li>Preferred visit frequency, start date, and expected project duration.</li><li>Site contact, access arrangements, and delivery requirements.</li></ul></div>
+<div data-quote-context="property-media" hidden><p>For real estate or vacation-rental media, include:</p><ul><li>Property address, approximate size, and listing or rental use.</li><li>Which media you need: aerial photos, aerial video, interiors, or exteriors.</li><li>Access contact, availability, and any guest turnover window.</li><li>Listing date or delivery deadline, plus any required formats.</li></ul></div>
+<p>Prefer to talk it through? Call <a href="tel:+18507337033">(850) 733-7033</a> or <a href="mailto:info@eazdrones.com">email Andrew</a>.</p>
+</section>
 									<div class="booking-form-intro"><h3>Request your project</h3><p>Google Forms is the fastest way to send the address, service type, timing, and project details needed for an accurate response.</p><p><a class="button primary" href="https://forms.gle/As2hiR8MxSg2ZkPt9" target="_blank" rel="noopener noreferrer">Open the Google Form</a></p></div>
-									<iframe src="https://forms.gle/As2hiR8MxSg2ZkPt9" title="EAZ Drones booking request form" width="100%" height="4391" loading="lazy" frameborder="0" marginheight="0" marginwidth="0" style="display: block; border: 0;">Loading...</iframe>
+									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqtZQYZJnu-V6xWRwxhdeevAwhjmyVhuOaxFU6USmHAZ9npQ/viewform?embedded=true" title="EAZ Drones booking request form" width="100%" height="4391" loading="lazy" frameborder="0" marginheight="0" marginwidth="0" style="display: block; border: 0;">Loading...</iframe>
 									<p class="booking-form-fallback">If the embedded form does not load, <a href="https://forms.gle/As2hiR8MxSg2ZkPt9" target="_blank" rel="noopener noreferrer">open it directly in Google Forms</a>, or call <a href="tel:+18507337033">(850) 733-7033</a>.</p>
 								</div>
 
 							</div>
 						</section>
 					</article>
-				<footer id="footer" class="site-footer"><div class="site-footer__grid"><div class="site-footer__brand-block"><p class="site-footer__brand">EAZ Drones.</p><p class="site-footer__copy">Owner-operated aerial photography, video, and inspections across the Florida Panhandle.</p></div><div class="site-footer__links"><a href="/pages/services.html">Services</a><a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a><a href="/pages/booking.html">Book</a><a href="mailto:info@eazdrones.com">info@eazdrones.com</a><a href="tel:+18507337033">(850) 733-7033</a></div></div><div class="site-footer__meta">&copy; 2026 EAZ Drones.</div></footer>
+				<footer id="footer" class="site-footer"><div class="site-footer__grid"><div class="site-footer__brand-block"><p class="site-footer__brand">EAZ Drones.</p><p class="site-footer__copy">Owner-operated aerial photography, video, and inspections across the Florida Panhandle.</p></div><div class="site-footer__links">
+<a href="/pages/construction-progress.html">Construction progress</a>
+<a href="/pages/real-estate-photography.html">Property photography</a>
+<a href="/pages/services.html">Services</a><a href="/pages/about.html">About</a><a href="/pages/contact.html">Contact</a><a href="/pages/booking.html">Book</a><a href="mailto:info@eazdrones.com">info@eazdrones.com</a><a href="tel:+18507337033">(850) 733-7033</a></div></div><div class="site-footer__meta">&copy; 2026 EAZ Drones.</div></footer>
 
 
 			</div>
 <!-- Scripts -->
 			<script src="../assets/js/site-ui.js" defer></script>
+<script src="../assets/js/booking-context.js" defer></script>
 
-	</body>
+	<script src="../assets/js/track.js" defer></script>
+</body>
 </html>

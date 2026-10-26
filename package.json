@@ -7,7 +7,7 @@
     "build": "powershell -ExecutionPolicy Bypass -File scripts/build_site.ps1",
   "optimize:images": "node scripts/optimize-images.js",
   "validate": "node scripts/validate-site.js",
-    "test": "npm run validate"
+    "test": "npm run validate && node --test scripts/test-lead-events.js"
   },
   "repository": {
     "type": "git",
