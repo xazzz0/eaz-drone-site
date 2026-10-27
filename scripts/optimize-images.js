@@ -116,7 +116,7 @@ async function main() {
   ensureDir(OUTPUT_DIR);
 
   await writeVariantSet({
-    inputFile: "smboro--jQc9HXteh4-unsplash.jpg",
+    inputFile: "lush-esate-smboro--jQc9HXteh4-unsplash.jpg",
     outputBaseName: "hero",
     widths: HERO_WIDTHS,
     aspectRatio: 16 / 9,
@@ -124,7 +124,15 @@ async function main() {
   });
 
   await writeVariantSet({
-    inputFile: "smboro--jQc9HXteh4-unsplash.jpg",
+    inputFile: "drone liftoff.jpg",
+    outputBaseName: "hero-flight",
+    widths: HERO_WIDTHS,
+    aspectRatio: 16 / 9,
+    position: "centre"
+  });
+
+  await writeVariantSet({
+    inputFile: "lush-esate-smboro--jQc9HXteh4-unsplash.jpg",
     outputBaseName: "spotlight-smboro",
     widths: SPOTLIGHT_WIDTHS,
     aspectRatio: 4 / 3,
@@ -132,7 +140,7 @@ async function main() {
   });
 
   await writeVariantSet({
-    inputFile: "anthony-rosset-aidE5wrGwzQ-unsplash.jpg",
+    inputFile: "landed-drone-anthony-rosset-aidE5wrGwzQ-unsplash.jpg",
     outputBaseName: "spotlight-anthony",
     widths: SPOTLIGHT_WIDTHS,
     aspectRatio: 4 / 3,
@@ -144,6 +152,30 @@ async function main() {
     outputBaseName: "spotlight-colin",
     widths: SPOTLIGHT_WIDTHS,
     aspectRatio: 4 / 3,
+    position: "centre"
+  });
+
+  await writeVariantSet({
+    inputFile: "drone inspecting.jpg",
+    outputBaseName: "hero-inspecting",
+    widths: HERO_WIDTHS,
+    aspectRatio: 16 / 9,
+    position: "centre"
+  });
+
+  await writeVariantSet({
+    inputFile: "pcola-beach.JPG",
+    outputBaseName: "hero-pcola",
+    widths: HERO_WIDTHS,
+    aspectRatio: 16 / 9,
+    position: "centre"
+  });
+
+  await writeVariantSet({
+    inputFile: "colin-lloyd-kx6VkhGxGdw-unsplash.jpg",
+    outputBaseName: "hero-about",
+    widths: HERO_WIDTHS,
+    aspectRatio: 16 / 9,
     position: "centre"
   });
 

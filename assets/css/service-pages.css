@@ -1,0 +1,56 @@
+/* Service detail pages share the existing Frame & Field design tokens. */
+#banner.service-hero { min-height: 560px; }
+#banner.service-hero .inner { max-width: 980px; }
+#banner.service-hero h1 { max-width: 16ch; font-size: clamp(54px, 7.4vw, 104px); }
+#banner.service-hero p { max-width: 58ch; }
+#banner.service-hero .button--primary,
+.service-detail .quote-panel .button--primary { background: var(--color-paper); border-color: var(--color-paper); color: var(--color-ink); }
+#banner.service-hero .button:not(.button--primary),
+.service-detail .quote-panel .button:not(.button--primary) { background: transparent; border-color: #777; color: var(--color-paper); }
+.service-detail .service-section { padding-block: 64px; border-bottom: 1px solid var(--color-hairline); }
+.service-detail .service-section:first-child { padding-top: 0; }
+.service-detail .service-section:last-child { border-bottom: 0; padding-bottom: 0; }
+.service-detail h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1; max-width: 20ch; }
+.service-detail h3 { font-size: clamp(26px, 3vw, 38px); line-height: 1.05; }
+.service-detail p { max-width: 72ch; color: var(--color-muted); margin-top: 18px; }
+.service-detail a:not(.button), .service-paths a, .quote-context a { text-decoration: underline; text-underline-offset: 4px; }
+.service-detail .service-grid, .service-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.service-detail .service-grid { margin-top: 32px; }
+.service-detail .service-grid > div { padding-top: 24px; border-top: 1px solid var(--color-hairline); min-width: 0; }
+.service-detail .service-list { margin-top: 20px; }
+.service-detail .service-list li { padding: 12px 0; border-bottom: 1px solid var(--color-hairline); }
+.service-detail .service-list li:last-child { border-bottom: 0; }
+.service-detail .service-steps { counter-reset: steps; margin-top: 24px; }
+.service-detail .service-steps li { counter-increment: steps; display: grid; grid-template-columns: 36px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--color-hairline); }
+.service-detail .service-steps li::before { content: "0" counter(steps); font-family: var(--font-mono); color: var(--color-muted); }
+.service-detail .service-steps p { margin-top: 8px; }
+.service-detail .service-faq { margin-top: 28px; }
+.service-detail .service-faq details { border-top: 1px solid var(--color-hairline); padding: 20px 0; }
+.service-detail .service-faq summary { cursor: pointer; font-weight: 600; min-height: 44px; display: list-item; list-style: disclosure-closed inside; }
+.service-detail .service-faq details[open] summary { list-style-type: disclosure-open; }
+.service-detail .quote-panel { padding: 32px; background: var(--color-ink); border-radius: var(--radius-lg); color: var(--color-paper); }
+.service-detail .quote-panel h2 { color: var(--color-paper); }
+.service-detail .quote-panel p { color: #d5d2cb; }
+.service-detail .quote-panel a:not(.button) { color: var(--color-paper); }
+.service-detail .service-note { font-size: 14px; }
+.service-detail figure { margin: 32px 0 0; }
+.service-detail figure img { width: 100%; height: auto; border-radius: var(--radius-lg); }
+.service-detail figcaption { margin-top: 12px; color: var(--color-muted); font-size: 13px; }
+.service-paths { margin-block: 12px; }
+.service-paths > div { padding: 24px 0; border-top: 1px solid var(--color-hairline); min-width: 0; }
+.service-paths h2, .service-paths h3 { font-size: clamp(28px, 3.5vw, 44px) !important; line-height: 1.05; }
+.service-paths p { margin-top: 14px; color: var(--color-muted); }
+.service-paths a { display: inline-block; margin-top: 16px; font-weight: 600; }
+.quote-context { padding: 24px; border: 1px solid var(--color-hairline); border-radius: var(--radius-lg); margin-bottom: 28px; }
+.quote-context h2 { font-size: clamp(28px, 3vw, 44px) !important; }
+.quote-context p { margin-top: 12px; }
+.quote-context ul { margin-top: 16px; }
+.quote-context li { padding: 8px 0 !important; }
+[hidden] { display: none !important; }
+@media (max-width: 700px) {
+  #banner.service-hero { min-height: 480px; }
+  #banner.service-hero .inner { padding: 32px 24px; }
+  .service-detail .service-grid, .service-paths { grid-template-columns: 1fr; gap: 24px; }
+  .service-detail .service-section { padding-block: 44px; }
+  .service-detail .quote-panel { padding: 24px; }
+}

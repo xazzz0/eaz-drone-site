@@ -4,8 +4,10 @@
   "description": "website for drone business",
   "main": "index.js",
   "scripts": {
+    "build": "powershell -ExecutionPolicy Bypass -File scripts/build_site.ps1",
     "optimize:images": "node scripts/optimize-images.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "validate": "node scripts/validate-site.js",
+    "test": "npm run validate && node --test scripts/test-lead-events.js scripts/test-analytics.js"
   },
   "repository": {
     "type": "git",
