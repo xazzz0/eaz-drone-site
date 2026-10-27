@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Self-hosted versions of the existing typefaces. Licenses: ../fonts/*-LICENSE.txt. */
+@font-face { font-family: "Anton"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/anton-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 100 800; font-display: swap; src: url("../fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2"); }
 
 :root {
   --color-paper: #f3f1ec;
@@ -669,17 +672,17 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
 }
 
 #inspection {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/roof-inspection.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/roof%20inspection.jpg');
   background-size: cover;
 }
 
 #events {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/wedding-chairs.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/wedding%20chairs.jpg');
   background-size: cover;
 }
 
 #real-estate {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/modern-real-estate.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/modern%20real%20estate.jpg');
   background-size: cover;
 }
 
@@ -689,12 +692,12 @@ article#main ul:not(.actions):not(.feature-list):not(.mini-grid):not(.icons):not
 }
 
 #mapping {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/land-development.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/land%20development.jpg');
   background-size: cover;
 }
 
 #progress {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/massive-construction-site.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../images/massive%20construction%20site.jpg');
   background-size: cover;
 }
 

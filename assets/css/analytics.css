@@ -1,0 +1,23 @@
+.analytics-choice {
+  position: fixed; z-index: 10000; bottom: 16px; left: 16px; right: 16px;
+  max-width: 940px; margin: 0 auto; padding: 20px; background: #f3f1ec; color: #161616;
+  border: 1px solid #c7c3ba; border-radius: 16px; box-shadow: 0 8px 32px #0003;
+  display: flex; align-items: center; gap: 24px; font: 14px/1.5 Inter, sans-serif;
+  max-height: calc(100vh - 32px); overflow: auto;
+}
+.analytics-choice[hidden] { display: none; }
+.analytics-choice p { margin: 6px 0 0; font-size: 14px; line-height: 1.5; }
+.analytics-choice a { text-decoration: underline; }
+.analytics-choice__actions { display: flex; flex-wrap: wrap; gap: 10px; flex-shrink: 0; }
+.analytics-choice button, .analytics-settings {
+  appearance: none; cursor: pointer; border: 1px solid currentColor; border-radius: 24px;
+  padding: 10px 16px; background: transparent; color: inherit; font: inherit;
+  height: auto; line-height: 1.4; white-space: normal;
+}
+.analytics-choice button:hover, .analytics-choice button:focus-visible { background: #e4e0d7; }
+.analytics-settings { text-align: left; padding: 0; border: 0; text-decoration: underline; }
+.analytics-settings[hidden] { display: none; }
+@media (max-width: 640px) {
+  .analytics-choice { flex-direction: column; align-items: stretch; gap: 14px; padding: 16px; }
+  .analytics-choice__actions button { flex: 1; }
+}

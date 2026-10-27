@@ -28,37 +28,37 @@
 		<meta name="twitter:image" content="https://www.eazdrones.com/images/optimized/hero-pcola-1280.webp" />
 		<link rel="stylesheet" href="../assets/css/frame-field.css" />
 		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "ProfessionalService",
-			"name": "EAZ Drones",
-			"description": "Professional drone services for Perdido Key - beachfront properties, resorts, and vacation rental photography",
-			"serviceType": ["Aerial Photography","Inspections","Thermal Imaging","Construction Progress Documentation"],
-			"areaServed": {"@type":"City","name":"Perdido Key, FL"},
-			"address": {"@type":"PostalAddress","addressLocality":"Perdido Key","addressRegion":"FL","addressCountry":"US"},
-			"telephone": "+1-850-733-7033",
-			"email": "info@eazdrones.com",
-			"geo": {"@type": "GeoCoordinates", "latitude": 30.2500, "longitude": -87.4667},
-			"url": "https://www.eazdrones.com/cities/perdido-key.html",
-			"hasOfferCatalog": {
-			  "@type": "OfferCatalog",
-			  "name": "Services",
-			  "itemListElement": [
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aerial Cinematography"}},
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Inspections & Reporting"}},
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Construction Documentation"}}
-			  ]
-			},
-			"priceRange": "$$",
-			"additionalType": "Drone Service Provider"
-		}
-		</script>
-	</head>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.eazdrones.com/cities/perdido-key.html#service",
+  "name": "Drone services in Perdido Key, FL",
+  "url": "https://www.eazdrones.com/cities/perdido-key.html",
+  "provider": {
+    "@id": "https://www.eazdrones.com/#business"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Perdido Key, FL"
+  },
+  "description": "Professional drone services for Perdido Key - beachfront properties, resorts, and vacation rental photography",
+  "serviceType": [
+    "Aerial Photography",
+    "Inspections",
+    "Thermal Imaging",
+    "Construction Progress Documentation"
+  ]
+}
+</script>
+	<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/anton-latin-400-normal.woff2" crossorigin />
+<link rel="stylesheet" href="/assets/css/analytics.css" />
+<script src="/assets/js/analytics.js" defer></script>
+</head>
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<a class="skip-link" href="#main-content">Skip to main content</a>
+				<a class="skip-link" href="#main">Skip to main content</a>
 <header id="header" class="site-header">
 	<a class="site-brand" href="/index.html" aria-label="EAZ Drones home">
 		<span class="site-brand__mark" aria-hidden="true">
@@ -94,7 +94,7 @@
 				</section>
 
 			<!-- Main -->
-				<article id="main">
+				<article id="main" tabindex="-1">
 						<section class="wrapper style5">
 							<div class="inner">
 
@@ -164,6 +164,12 @@
 			</ul>
 		</div>
 		<div class="site-footer__links">
+<a href="/pages/privacy.html">Privacy</a>
+<button type="button" class="analytics-settings" data-analytics-settings hidden>Analytics settings</button>
+
+<a href="/pages/construction-progress.html">Construction progress</a>
+<a href="/pages/real-estate-photography.html">Property photography</a>
+
 			<a href="/pages/services.html">Services</a>
 			<a href="/pages/about.html">About</a>
 			<a href="/pages/contact.html">Contact</a>
@@ -180,5 +186,6 @@
 			</div>
 <!-- Scripts -->
 
-	</body>
+	<script src="../assets/js/track.js" defer></script>
+</body>
 </html>

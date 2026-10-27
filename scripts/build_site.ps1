@@ -27,7 +27,14 @@ foreach ($page in $pages) {
     $text = [regex]::Replace($text, '(?m)\s*<script src="(?:\.\./)?assets/js/site-fragments\.js" defer><\/script>', '')
     $text = [regex]::Replace($text, "`r?`n\s*<script src='\/(?:\.\./)?assets\/js\/site-fragments\.js'><\/script>\s*", "`r`n")
     $text = [regex]::Replace($text, '(?m)\s*<script src="(?:\.\./)?assets/js/(?:jquery\.min|jquery\.scrollex\.min|jquery\.scrolly\.min|browser\.min|breakpoints\.min|util|main)\.js" defer><\/script>', '')
-    $text = [regex]::Replace($text, '(?m)\s*<script src="(?:\.\./)?assets/js/track\.js" defer><\/script>', '')
+    if ($text -notmatch 'assets/js/analytics\.js') {
+        $text = $text.Replace('</head>', '<link rel="stylesheet" href="/assets/css/analytics.css" /><script src="/assets/js/analytics.js" defer></script></head>')
+    }
+    # Preserve the optional analytics event bridge when rebuilding page fragments.
+    $trackerPath = if ($page -eq (Join-Path $root 'index.html')) { 'assets/js/track.js' } else { '../assets/js/track.js' }
+    if ($text -notmatch 'assets/js/track\.js') {
+        $text = $text.Replace('</body>', "<script src=`"$trackerPath`" defer></script>`r`n</body>")
+    }
     $scriptPath = if ($page -like "$root\index.html") { 'assets/js/site-ui.js' } else { '../assets/js/site-ui.js' }
     if ($text -notmatch 'assets/js/site-ui\.js') {
         $text = $text -replace '(?m)(\s*<script src="(?:\.\./)?assets/js/track\.js" defer><\/script>)', "`r`n`t`t`t<script src=`"$scriptPath`" defer></script>`$1"

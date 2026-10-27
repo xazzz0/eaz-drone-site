@@ -28,37 +28,37 @@
 		<meta name="twitter:image" content="https://www.eazdrones.com/images/optimized/hero-pcola-1280.webp" />
 		<link rel="stylesheet" href="../assets/css/frame-field.css" />
 		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "ProfessionalService",
-			"name": "EAZ Drones &mdash; Fort Walton Beach Coverage",
-			"description": "Professional drone services for Fort Walton Beach - resorts, vacation rentals, and construction documentation",
-			"serviceType": ["Aerial Photography","Inspections","Thermal Imaging","Construction Progress Documentation"],
-			"address": {"@type":"PostalAddress","addressLocality":"Fort Walton Beach","addressRegion":"FL","addressCountry":"US"},
-			"areaServed": {"@type":"City","name":"Fort Walton Beach, FL"},
-			"telephone": "+1-850-733-7033",
-			"email": "info@eazdrones.com",
-			"geo": {"@type": "GeoCoordinates", "latitude": 30.4074, "longitude": -86.6155},
-			"url": "https://www.eazdrones.com/cities/fort-walton-beach.html",
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "Services",
-				"itemListElement": [
-					{"@type":"Offer","itemOffered":{"@type":"Service","name":"Aerial Cinematography"}},
-					{"@type":"Offer","itemOffered":{"@type":"Service","name":"Inspections & Reporting"}},
-					{"@type":"Offer","itemOffered":{"@type":"Service","name":"Construction Documentation"}}
-				]
-			},
-			"priceRange": "$$",
-			"additionalType": "Drone Service Provider"
-		}
-		</script>
-	</head>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.eazdrones.com/cities/fort-walton-beach.html#service",
+  "name": "Drone services in Fort Walton Beach, FL",
+  "url": "https://www.eazdrones.com/cities/fort-walton-beach.html",
+  "provider": {
+    "@id": "https://www.eazdrones.com/#business"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Fort Walton Beach, FL"
+  },
+  "description": "Professional drone services for Fort Walton Beach - resorts, vacation rentals, and construction documentation",
+  "serviceType": [
+    "Aerial Photography",
+    "Inspections",
+    "Thermal Imaging",
+    "Construction Progress Documentation"
+  ]
+}
+</script>
+	<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/anton-latin-400-normal.woff2" crossorigin />
+<link rel="stylesheet" href="/assets/css/analytics.css" />
+<script src="/assets/js/analytics.js" defer></script>
+</head>
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<a class="skip-link" href="#main-content">Skip to main content</a>
+				<a class="skip-link" href="#main">Skip to main content</a>
 <header id="header" class="site-header">
 	<a class="site-brand" href="/index.html" aria-label="EAZ Drones home">
 		<span class="site-brand__mark" aria-hidden="true">
@@ -94,7 +94,7 @@
 				</section>
 
 			<!-- Main -->
-				<article id="main">
+				<article id="main" tabindex="-1">
 						<section class="wrapper style5">
 							<div class="inner">
 
@@ -177,6 +177,12 @@
 			</ul>
 		</div>
 		<div class="site-footer__links">
+<a href="/pages/privacy.html">Privacy</a>
+<button type="button" class="analytics-settings" data-analytics-settings hidden>Analytics settings</button>
+
+<a href="/pages/construction-progress.html">Construction progress</a>
+<a href="/pages/real-estate-photography.html">Property photography</a>
+
 			<a href="/pages/services.html">Services</a>
 			<a href="/pages/about.html">About</a>
 			<a href="/pages/contact.html">Contact</a>
@@ -193,5 +199,6 @@
 			</div>
 <!-- Scripts -->
 
-	</body>
+	<script src="../assets/js/track.js" defer></script>
+</body>
 </html>

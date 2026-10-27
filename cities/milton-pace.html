@@ -28,40 +28,43 @@
 		<meta name="twitter:image" content="https://www.eazdrones.com/images/optimized/hero-pcola-1280.webp" />
 		<link rel="stylesheet" href="../assets/css/frame-field.css" />
 		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "ProfessionalService",
-			"name": "EAZ Drones &mdash; Milton & Pace Coverage",
-			"url": "https://www.eazdrones.com/cities/milton-pace.html",
-			"telephone": "+1-850-733-7033",
-			"email": "info@eazdrones.com",
-			"address": {"@type":"PostalAddress","addressLocality":"Milton","addressRegion":"FL","addressCountry":"US"},
-			"areaServed": [
-			  {"@type":"City","name":"Milton, FL"},
-			  {"@type":"City","name":"Pace, FL"}
-			],
-			"serviceType": ["Aerial Photography","Inspections","Thermal Imaging","Construction Progress Documentation"],
-			"description": "Professional drone services for Milton & Pace - residential inspections, construction documentation, and rural properties",
-			"geo": {"@type": "GeoCoordinates", "latitude": 30.6433, "longitude": -87.0179},
-			"hasOfferCatalog": {
-			  "@type": "OfferCatalog",
-			  "name": "Services",
-			  "itemListElement": [
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aerial Cinematography"}},
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Inspections & Reporting"}},
-			    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Construction Documentation"}}
-			  ]
-			},
-			"priceRange": "$$",
-			"additionalType": "Drone Service Provider"
-		}
-		</script>
-	</head>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.eazdrones.com/cities/milton-pace.html#service",
+  "name": "Drone services in Milton, FL, Pace, FL",
+  "url": "https://www.eazdrones.com/cities/milton-pace.html",
+  "provider": {
+    "@id": "https://www.eazdrones.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Milton, FL"
+    },
+    {
+      "@type": "City",
+      "name": "Pace, FL"
+    }
+  ],
+  "description": "Professional drone services for Milton & Pace - residential inspections, construction documentation, and rural properties",
+  "serviceType": [
+    "Aerial Photography",
+    "Inspections",
+    "Thermal Imaging",
+    "Construction Progress Documentation"
+  ]
+}
+</script>
+	<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/anton-latin-400-normal.woff2" crossorigin />
+<link rel="stylesheet" href="/assets/css/analytics.css" />
+<script src="/assets/js/analytics.js" defer></script>
+</head>
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<a class="skip-link" href="#main-content">Skip to main content</a>
+				<a class="skip-link" href="#main">Skip to main content</a>
 <header id="header" class="site-header">
 	<a class="site-brand" href="/index.html" aria-label="EAZ Drones home">
 		<span class="site-brand__mark" aria-hidden="true">
@@ -97,7 +100,7 @@
 					</section>
 
 				<!-- Main -->
-					<article id="main">
+					<article id="main" tabindex="-1">
 						<section class="wrapper style5">
 							<div class="inner">
 
@@ -169,6 +172,12 @@
 			</ul>
 		</div>
 		<div class="site-footer__links">
+<a href="/pages/privacy.html">Privacy</a>
+<button type="button" class="analytics-settings" data-analytics-settings hidden>Analytics settings</button>
+
+<a href="/pages/construction-progress.html">Construction progress</a>
+<a href="/pages/real-estate-photography.html">Property photography</a>
+
 			<a href="/pages/services.html">Services</a>
 			<a href="/pages/about.html">About</a>
 			<a href="/pages/contact.html">Contact</a>
@@ -185,5 +194,6 @@
 			</div>
 <!-- Scripts -->
 
-	</body>
+	<script src="../assets/js/track.js" defer></script>
+</body>
 </html>
