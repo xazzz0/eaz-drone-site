@@ -15,6 +15,10 @@ function page(analytics) {
     dispatchEvent: (event) => observed.push(event.detail),
   };
   if (analytics === 'gtag') window.gtag = (...args) => sent.push(args);
+  if (analytics === 'declined') {
+    window.eazAnalytics = { isEnabled: () => false };
+    window.gtag = (...args) => sent.push(args);
+  }
   if (analytics === 'dataLayer') window.dataLayer = [];
   vm.runInNewContext(source, {
     window, URL, URLSearchParams,
@@ -74,4 +78,12 @@ test('ordinary navigation and unsupported service values do not become lead deta
   p.click('/pages/booking.html?service=someone@example.com');
   assert.equal(p.observed[0].parameters.service, 'general');
   assert.ok(!JSON.stringify(p.observed).includes('someone@'));
+});
+
+test('declined analytics never receives or queues contact actions', () => {
+  const p = page('declined');
+  p.click('/pages/booking.html?service=construction-progress');
+  p.click('mailto:info@eazdrones.com');
+  assert.equal(p.sent.length, 0);
+  assert.equal(p.window.dataLayer, undefined);
 });

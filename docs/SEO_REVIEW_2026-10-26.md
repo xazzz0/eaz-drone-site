@@ -1,5 +1,7 @@
 # Organic search implementation review
 
+> October 27 follow-up: the owner subsequently authorized implementation and supplied the existing GA4 measurement ID. The updated branch incorporates the already-published PR #6 copy and includes [consent-based analytics](ANALYTICS_SETUP.md). Statements below about awaiting authorization and a stream ID are historical. The original review and measurement limits remain documented here.
+
 ## State and scope
 
 Repository and deployment rechecked October 26, 2026: `xazzz0/eaz-drone-site`; latest successful Pages run `32222436600` deployed branch `test`, commit `fa8c20e`. PR #5 is open on `seo-aeo-growth`. This work extends that review branch and does not deploy. It executes the regular website SEO prompt; no separate AEO campaign was run.

@@ -16,7 +16,9 @@
     };
 
     // Lets a configured analytics tag consume the event; does not install a tag.
-    if (typeof window.gtag === 'function') {
+    if (window.eazAnalytics && !window.eazAnalytics.isEnabled()) {
+      // The visitor has not allowed analytics. Do not queue their actions for later.
+    } else if (typeof window.gtag === 'function') {
       window.gtag('event', eventName, params);
     } else if (window.dataLayer && Array.isArray(window.dataLayer)) {
       window.dataLayer.push(Object.assign({ event: eventName }, params));

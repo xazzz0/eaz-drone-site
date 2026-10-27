@@ -41,6 +41,8 @@ for (const file of htmlFiles) {
   if ((text.match(/<h1\b/gi) || []).length !== 1) problems.push(`${relative}: expected exactly one h1`);
   if (/<div\s+data-site-(?:header|footer)\b/i.test(text)) problems.push(`${relative}: contains unbuilt site fragment placeholder`);
   if (/site-fragments\.js/i.test(text)) problems.push(`${relative}: contains runtime fragment loader`);
+  if ((text.match(/src="\/assets\/js\/analytics\.js"/g) || []).length !== 1) problems.push(`${relative}: expected one analytics setup script`);
+  if (!text.includes('data-analytics-settings')) problems.push(`${relative}: missing analytics choice control`);
   if (/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(text)) problems.push(`${relative}: production page is marked noindex`);
 
   const canonical = text.match(/<link\s+rel=["']canonical["'][^>]*href=["']([^"']+)["']/i);

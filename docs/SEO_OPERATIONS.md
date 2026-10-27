@@ -1,5 +1,9 @@
 # SEO and local visibility operations
 
+## October 27 release update
+
+The owner authorized proceeding with the top-three improvement plan and supplied the existing Analytics stream. This update integrates the production copy fixes from PR #6, preserves its recurring-coverage section, and adds the consent-based Analytics setup described in [ANALYTICS_SETUP.md](ANALYTICS_SETUP.md). Older references below to a missing stream or a review-only state describe the earlier preparation phase. Public deployment and receipt of Analytics data must be verified separately.
+
 The [October 26 organic search review](SEO_REVIEW_2026-10-26.md) records the current search baseline, search-to-page priorities, follow-up changes, measurement dependency, and owner actions. Use the [project write-up workflow](PROJECT_WRITEUP_TEMPLATE.md) for future original work; local link research and unsent drafts are kept in the separate owner report.
 
 ## Source and deployment
